@@ -1,6 +1,6 @@
 <template>
-    <NavBar />
-    <router-view />
+    <NavBar style="font-family: 'Source Sans Pro', sans-serif;"/>
+    <router-view class="p-10" style="font-family: 'Source Sans Pro', sans-serif;"/>
 </template>
 
 <script>

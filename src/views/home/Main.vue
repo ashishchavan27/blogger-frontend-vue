@@ -1,31 +1,28 @@
 <template>
-    <div class="p-5">
-        <div class="row mx-0 font-medium bg-blue">
-            <div class="col-sm-12 col-md-6 col-lg-6 pt-4 mx-1">
-                <div>
-                    <div class="col-12">
-                        <strong>Bloggers</strong>
-                        <h2>{{ post }}</h2>
-                        <hr />
-                    </div>
-                    <div class="coffee">Grab a coffee and keep blogging!!</div>
-                    <div class="coffee text-blogger">
-                        Are to ready to start your first blog?
-                        <br />
-                        <button class="btn btn-primary bg-blogger">
-                            <a href="/posts/add" class="text-white">Get Started</a>
-                        </button>
-                    </div>
-                    <div class="coffee" style="color: #007bffc7">
-                        Start your blog journey with us!!
-                        <br />
-                        <button class="btn btn-primary bg-bloggers">
-                            <a href="/login" class="text-black">Login</a>
-                        </button>
-                    </div>
+    <div>
+        <div class="grid grid-cols-12 gap-7">
+            <div class="col-span-7 flex flex-col space-y-4">
+                <img src="https://picsum.photos/id/1005/800/500" alt srcset />
+                <h4>Ashish Chavan, India</h4>
+                <h2 class="text-4xl text-gray-600">Begin your blog journey with us</h2>
+                <p
+                    class="text-md text-gray-500"
+                >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque egestas congue quisque egestas diam in arcu cursus. Aliquam id diam maecenas ultricies ...</p>
+            </div>
+            <div class="col-span-5 flex flex-col space-y-7">
+                <div class="flex space-x-4">
+                    <img src="https://picsum.photos/id/1020/800/500" class="w-60 h-36" alt srcset />
+                    <h2 class="text-2xl text-gray-600">Begin your blog journey with us</h2>
+                </div>
+                <div class="flex space-x-4">
+                    <img src="https://picsum.photos/id/1033/800/500" class="w-60 h-36" alt srcset />
+                    <h2 class="text-2xl text-gray-600">Begin your blog journey with us</h2>
+                </div>
+                <div class="flex space-x-4">
+                    <img src="https://picsum.photos/id/1035/800/500" class="w-60 h-36" alt srcset />
+                    <h2 class="text-2xl text-gray-600">Begin your blog journey with us</h2>
                 </div>
             </div>
-            <div class="w-full"></div>
         </div>
     </div>
 </template>

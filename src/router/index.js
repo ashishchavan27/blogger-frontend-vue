@@ -2,7 +2,7 @@ import { createRouter, createWebHistory } from "vue-router";
 import Home from "../views/home/Main.vue";
 import Feed from "../views/feed/Main.vue";
 import CreatePost from "../views/posts/Create.vue";
-import Explore from "../views/posts/View.vue";
+import AboutUs from "../views/home/AboutUs.vue";
 import Login from "../views/auth/Login.vue";
 import Register from "../views/auth/Register.vue";
 
@@ -18,9 +18,9 @@ const routes = [
         component: Home,
     },
     {
-        path: "/explore",
-        name: "explore",
-        component: Explore,
+        path: "/about-us",
+        name: "about-us",
+        component: AboutUs,
     },
     {
         path: "/feed",
