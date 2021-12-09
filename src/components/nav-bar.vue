@@ -7,7 +7,7 @@
             <router-link to="/home">Home</router-link>
             <router-link to="/feed">Feed</router-link>
             <router-link to="/create-post">Create</router-link>
-            <router-link to="/explore">Post</router-link>
+            <router-link to="/about-us">About us</router-link>
         </div>
         <div class="my-auto py-6 flex space-x-6 ml-auto font-medium">
             <router-link to="/login" class="ml-auto">Login</router-link>
