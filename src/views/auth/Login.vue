@@ -33,7 +33,7 @@
                     class="btn bg-blue-500 text-white w-full p-2 rounded-md"
                 >
                     Save
-                </button>
+                </button> 
             </div>
         </form>
     </div>
