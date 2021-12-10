@@ -1,6 +1,6 @@
 <template>
     <div class="mx-auto" style="width:30rem">
-        <form @submit.prevent="createNewUser" class="border border-gray-300 p-5 w-full flex flex-col space-y-4 w-100 mt-8 shadow-sm rounded-xl">
+        <form @submit.prevent="createNewUser" class="border border-gray-300 p-5 w-full flex flex-col space-y-4 w-100 mt-8 shadow-xl rounded-xl">
             <div class="font-medium text-xl text-gray-600">
                 <h3>Register</h3>
             </div>

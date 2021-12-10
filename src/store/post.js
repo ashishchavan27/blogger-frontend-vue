@@ -1,6 +1,8 @@
 const state = () =>{
     return {
-        post: "POST",
+        post: {},
+        postFeed: [],
+        allPosts: [],
     }
 };
 
@@ -9,11 +11,20 @@ const getters = {
 };
 
 const actions = {
-
+    async addNewPost({commit},payload){
+        try {
+            commit('createNewPost',payload);
+        } catch (error) {
+            console.log(error);
+        }
+    }
 };
 
 const mutations = {
-
+    createNewPost(state,postData){
+        state.post = postData;
+        state.allPosts.push(postData);
+    }
 };
 
 export default {

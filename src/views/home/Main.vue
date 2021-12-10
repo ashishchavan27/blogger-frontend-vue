@@ -12,15 +12,30 @@
             <div class="col-span-5 flex flex-col space-y-7">
                 <div class="flex space-x-4">
                     <img src="https://picsum.photos/id/1020/800/500" class="w-60 h-36" alt srcset />
-                    <h2 class="text-2xl text-gray-600">Begin your blog journey with us</h2>
+                    <div>
+                        <h2 class="text-2xl text-gray-600">Begin your blog journey</h2>
+                        <p
+                            class="text-md text-gray-500"
+                        >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque egestas congue quisque egestas...</p>
+                    </div>
                 </div>
                 <div class="flex space-x-4">
                     <img src="https://picsum.photos/id/1033/800/500" class="w-60 h-36" alt srcset />
-                    <h2 class="text-2xl text-gray-600">Begin your blog journey with us</h2>
+                    <div>
+                        <h2 class="text-2xl text-gray-600">Begin your blog journey</h2>
+                        <p
+                            class="text-md text-gray-500"
+                        >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque egestas congue quisque egestas...</p>
+                    </div>
                 </div>
                 <div class="flex space-x-4">
                     <img src="https://picsum.photos/id/1035/800/500" class="w-60 h-36" alt srcset />
-                    <h2 class="text-2xl text-gray-600">Begin your blog journey with us</h2>
+                    <div>
+                        <h2 class="text-2xl text-gray-600">Begin your blog journey</h2>
+                        <p
+                            class="text-md text-gray-500"
+                        >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Neque egestas congue quisque egestas...</p>
+                    </div>
                 </div>
             </div>
         </div>
