@@ -1,6 +1,11 @@
 <template>
-    <div class="mx-auto" style="width:30rem">
-        <form @submit.prevent="submitUserData" class="mx-auto border border-gray-300 p-5 w-full flex flex-col space-y-4 w-100 mt-8 shadow-xl rounded-xl">
+    <div class="grid grid-cols-2">
+        <div
+            class=" mx-auto border border-gray-300 w-80 my-6 shadow-xl overflow-hidden rounded-full col-span-1 ring-4 ring-white"
+        >
+            <img src="https://picsum.photos/id/1005/600" alt="">
+        </div> 
+        <form @submit.prevent="submitUserData" class=" col-span-1 border border-gray-300 p-5 w-80 flex flex-col space-y-4 w-100 mt-8 shadow-xl rounded-xl">
             <div class="font-medium text-xl text-gray-600">
                 <h3>Login</h3>
             </div>
@@ -35,6 +40,13 @@
                     Save
                 </button> 
             </div>
+            <div>
+                <h2
+                    class="text-gray-500 w-full"
+                >
+                    Don't have a account? <span @click="router.push('/register')" class="cursor-pointer text-gray-800 font-bold">Register</span>
+                </h2> 
+            </div>
         </form>
     </div>
 </template>
@@ -42,6 +54,7 @@
 <script>
 import { defineComponent, reactive } from "vue";
 import useStore from "../../store/main";
+import router from "../../router";
 
 export default defineComponent({
     setup() {
@@ -55,6 +68,7 @@ export default defineComponent({
         }
         return {
             user,
+            router,
             submitUserData
         };
     },
