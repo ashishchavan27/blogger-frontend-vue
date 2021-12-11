@@ -38,7 +38,7 @@
             class="border border-gray-300 w-full flex flex-col space-y-4 w-100 mt-8 shadow-xl rounded-xl p-5 col-span-3"
         >
             <img :src="'https://picsum.photos/id/'+index*100+'/800/500'" alt="">
-            <h2 class="text-gray-600 px-2 text-sm">Likes: {{ post.title }} Comments:{{index}}</h2>
+            <h2 class="text-gray-600 px-2 text-sm">Likes: {{ index*2 }} Comments:{{index}}</h2>
             <h2 class="text-gray-600">{{ post.title }}</h2>
         </div>
     </div>

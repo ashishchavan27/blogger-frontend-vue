@@ -1,10 +1,13 @@
 <template>
-    <div class="mx-auto" style="width:30rem">
-        <form @submit.prevent="createNewPost" class="mx-auto border border-gray-300 p-5 w-full flex flex-col space-y-4 w-100 mt-8 rounded-xl shadow-xl">
-            <div class="font-medium text-xl text-gray-600">
+    <div class="grid grid-cols-2 gap-4">
+        <form
+            @submit.prevent="createNewPost"
+            class="col-span-1 border border-gray-300 w-full p-5 grid grid-cols-2 gap-4 rounded-xl shadow-xl"
+        >
+            <div class="col-span-2 font-medium text-xl text-gray-600">
                 <h3>Create post</h3>
             </div>
-            <div class="flex flex-col space-y-2 w-full rounded-md">
+            <div class="col-span-1 flex flex-col space-y-2 w-full rounded-md">
                 <label for="title">Title</label>
                 <input
                     name="title"
@@ -15,8 +18,40 @@
                     required
                 />
             </div>
-            <div class="flex flex-col space-y-2 w-full rounded-md">
-                <label for="title">Description</label>
+            <div class="col-span-1 flex flex-col space-y-2 w-full rounded-md">
+                <label for="imageUrl">Image Url</label>
+                <input
+                    name="imageUrl"
+                    id="post-imageUrl"
+                    placeholder="Enter imageUrl"
+                    class="form-control border border-gray-300 focus:outline-none focus:ring-0 w-full focus:border-gray-300 p-2 rounded-md"
+                    v-model="post.imageUrl"
+                    required
+                />
+            </div>
+            <div class="col-span-1 flex flex-col space-y-2 w-full rounded-md">
+                <label for="category">Category</label>
+                <input
+                    name="category"
+                    id="post-category"
+                    placeholder="Enter category"
+                    class="form-control border border-gray-300 focus:outline-none focus:ring-0 w-full focus:border-gray-300 p-2 rounded-md"
+                    v-model="post.category"
+                    required
+                />
+            </div>
+            <div class="col-span-1 flex flex-col space-y-2 w-full rounded-md">
+                <label for="location">Location (Optional)</label>
+                <input
+                    name="location"
+                    id="post-location"
+                    placeholder="Enter location"
+                    class="form-control border border-gray-300 focus:outline-none focus:ring-0 w-full focus:border-gray-300 p-2 rounded-md"
+                    v-model="post.location"
+                />
+            </div>
+            <div class="col-span-2 flex flex-col space-y-2 w-full rounded-md">
+                <label for="description">Description</label>
                 <textarea
                     type="text"
                     rows="10"
@@ -28,19 +63,21 @@
                     required
                 />
             </div>
-            <div>
+            <div class="col-span-2">
                 <button
                     type="submit"
                     class="btn bg-gray-500 text-white w-full p-2 rounded-md"
-                >
-                    Create
-                </button> 
+                >Post</button>
             </div>
         </form>
-        <!-- <div v-for="selectedPost,index in allPosts" :key="index">
-            <p>{{selectedPost.title}}</p>
-            <p>{{selectedPost.description}}</p>
-        </div> -->
+        <div class="col-span-1 border border-gray-300 w-full p-5 flex flex-col space-y-4 rounded-xl shadow-xl">
+            <p class="font-medium text-xl text-gray-600">Preview</p>
+            <img :src="post.imageUrl" alt="" srcset="" class="w-60 h-60">
+            <p>{{ post.location }}</p>
+            <p>#{{ post.category }}</p>
+            <p>{{ post.title }}</p>
+            <p>{{ post.description }}</p>
+        </div>
     </div>
 </template>
 
@@ -54,10 +91,13 @@ export default defineComponent({
         let post = reactive({
             title: "",
             description: "",
-        }) 
-        let allPosts = computed(()=>store.state.post.allPosts);
+            category: "",
+            location: "",
+            imageUrl: "",
+        })
+        let allPosts = computed(() => store.state.post.allPosts);
         const createNewPost = () => {
-            store.dispatch("post/addNewPost",post);
+            store.dispatch("post/addNewPost", post);
         }
         return {
             post,
