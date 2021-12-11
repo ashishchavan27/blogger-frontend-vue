@@ -10,6 +10,7 @@
             <router-link to="/about-us">About us</router-link>
         </div>
         <div class="my-auto py-6 flex space-x-6 ml-auto font-medium">
+            <router-link to="/profile" class="ml-auto">Profile</router-link>
             <router-link to="/login" class="ml-auto">Login</router-link>
             <router-link to="/register">Register</router-link>
         </div>
