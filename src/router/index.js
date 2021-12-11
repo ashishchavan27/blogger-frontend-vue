@@ -4,6 +4,7 @@ import Feed from "../views/feed/Main.vue";
 import CreatePost from "../views/posts/Create.vue";
 import AboutUs from "../views/home/AboutUs.vue";
 import Login from "../views/auth/Login.vue";
+import Profile from "../views/auth/Profile.vue";
 import Register from "../views/auth/Register.vue";
 
 const routes = [
@@ -41,6 +42,11 @@ const routes = [
         path: "/register",
         name: "register",
         component: Register,
+    },
+    {
+        path: "/profile",
+        name: "profile",
+        component: Profile,
     },
 ];
 
