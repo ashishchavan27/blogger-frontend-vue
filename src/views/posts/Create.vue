@@ -31,14 +31,17 @@
             </div>
             <div class="col-span-1 flex flex-col space-y-2 w-full rounded-md">
                 <label for="category">Category</label>
-                <input
-                    name="category"
-                    id="post-category"
-                    placeholder="Enter category"
-                    class="form-control border border-gray-300 focus:outline-none focus:ring-0 w-full focus:border-gray-300 p-2 rounded-md"
-                    v-model="post.category"
-                    required
-                />
+                <div class="flex space-x-2">
+                    <input
+                        name="category"
+                        id="post-category"
+                        placeholder="Enter category"
+                        class="form-control border border-gray-300 focus:outline-none focus:ring-0 w-full focus:border-gray-300 p-2 rounded-md"
+                        v-model="post.category"
+                        required
+                    />
+                    <i class="fa fa-plus-circle my-auto cursor-pointer" aria-hidden="true" title="Add category" @click="openAddCategoryModal"></i>
+                </div>
             </div>
             <div class="col-span-1 flex flex-col space-y-2 w-full rounded-md">
                 <label for="location">Location (Optional)</label>
@@ -82,7 +85,7 @@
 </template>
 
 <script>
-import { computed, defineComponent, reactive } from "vue";
+import { computed, defineComponent, reactive, ref } from "vue";
 import useStore from "../../store/main";
 
 export default defineComponent({
@@ -96,13 +99,21 @@ export default defineComponent({
             imageUrl: "",
         })
         let allPosts = computed(() => store.state.post.allPosts);
+        let showAddCategoryModal = ref(false);
+
         const createNewPost = () => {
             store.dispatch("post/addNewPost", post);
         }
+
+        const openAddCategoryModal = () => {
+            showAddCategoryModal.value = true;
+        }
+
         return {
             post,
             allPosts,
-            createNewPost
+            createNewPost,
+            openAddCategoryModal
         };
     },
 });
